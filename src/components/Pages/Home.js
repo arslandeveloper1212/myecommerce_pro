@@ -5,6 +5,8 @@ import BestDeal from '../BestDeal'
 import Choosebybrand from '../Choosebybrand'
 import GetUpTo from '../GetUpTo'
 import Allproducthere from '../Allproducthere'
+import MostSelling from '../MostSelling'
+import TrendingProducts from '../TrendingProducts'
 
 
 
@@ -73,7 +75,7 @@ const Home = () => {
         </div>
       </section>
 
-     
+
 
 
 
@@ -89,6 +91,49 @@ const Home = () => {
           </div>
         </div>
 
+      </section>
+
+
+      <section>
+        <div className='cash_back_jumbotron py-5' style={{ background: "#FFE6CC" }}>
+          <div className='container'>
+            <div className='row align-items-center'>
+              <div className='col-lg-6 col-md-6 col-12'>
+                <h2 style={{ fontSize: "55px", fontWeight: "bold" }}>Get 5% Cash Back</h2>
+                <h5>on Shopcart.com</h5>
+                <button className='btn_green_class mt-4'>Learn More</button>
+              </div>
+              <div className='col-lg-6 col-md-6 col-12'>
+                <img src='/img/card.png' className='img-fluid mt-sm-4' />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div className='Most_Selling_Products'>
+          <div className='container pt-3'>
+            <div className='row'>
+              <div className='head pb-3'>
+                <h1>Most Selling Products</h1>
+                <MostSelling />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='Trending_Products_For_You!'>
+      <div className='container pt-3'>
+            <div className='row'>
+              <div className='head pb-3'>
+                <h1>Trending Products For You</h1>
+                <TrendingProducts/>
+              </div>
+            </div>
+          </div>
       </section>
 
     </div>
