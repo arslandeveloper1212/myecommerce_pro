@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <div>
-            <div className='container'>
+            <div className='container mt-5'>
                 <div className='row'>
                     <div className='col-lg-4 col-md-6 col-12'>
                         <div className='row'>
@@ -58,7 +58,7 @@ const Footer = () => {
                                 <h4>Department</h4>
                             </div>
                             <div className='section_footer_content d-flex flex-column'>
-                                <span><Link to="#">Macbook</Link></span>
+                                <span><Link style={{textDecoration:"none",color:"black"}} to="#">Macbook</Link></span>
                                 <span><Link to="#">Towel</Link></span>
                                 <span><Link to="#">Headphone</Link></span>
                                 <span><Link to="#">Tablet</Link></span>

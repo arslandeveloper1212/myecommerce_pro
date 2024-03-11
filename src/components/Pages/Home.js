@@ -39,7 +39,7 @@ const Home = () => {
         </div>
       </section>
       <section className='Choose_by_brand'>
-        <div className='container mt-4 pt-3'>
+        <div className='container mt-5 pt-3'>
           <div className='row'>
             <div className='head pb-3'>
               <h1>Choose by Brand</h1>
@@ -66,7 +66,7 @@ const Home = () => {
       </section>
 
 
-      <section className='banner_inner_here position-relative d-flex justify-content-center align-items-center'>
+      <section className='banner_inner_here mt-5 position-relative d-flex justify-content-center align-items-center'>
         <img src='/img/bs.png' alt='title' style={{ width: "100%" }} />
         <div className='green_bannerinner_background position-absolute top-50 end-0 translate-middle-y p-5 pr-3' style={{ objectFit: "cover", marginRight: "53px;" }}>
           <div>
@@ -82,11 +82,11 @@ const Home = () => {
 
 
 
-      <section className='Product_detail_here'>
+      <section className='Product_detail_here mt-5'>
         <div className='container pt-3'>
           <div className='row'>
             <div className='head pb-3'>
-              <h1>Today Best Deals For You!</h1>
+              <h1  className='mb-5'>Today Best Deals For You!</h1>
             </div>
             <Allproducthere />
 
@@ -116,11 +116,11 @@ const Home = () => {
 
 
       <section>
-        <div className='Most_Selling_Products'>
+        <div className='Most_Selling_Products mt-5'>
           <div className='container pt-3'>
             <div className='row'>
               <div className='head pb-3'>
-                <h1>Most Selling Products</h1>
+                <h1  className='mb-5'>Most Selling Products</h1>
                 <MostSelling />
               </div>
             </div>
@@ -128,11 +128,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='Trending_Products_For_You!'>
+      <section className='Trending_Products_For_You! mt-5'>
         <div className='container pt-3'>
           <div className='row'>
             <div className='head pb-3'>
-              <h1>Trending Products For You</h1>
+              <h1 className='mb-5'>Trending Products For You</h1>
               <TrendingProducts />
             </div>
           </div>
@@ -140,11 +140,11 @@ const Home = () => {
       </section>
 
 
-      <section className='best_selling_store'>
+      <section className='best_selling_store mt-5'>
         <div className='container pt-3'>
           <div className='row'>
             <div className='head pb-3'>
-              <h1>Best Selling Store</h1>
+              <h1  className='mb-5'>Best Selling Store</h1>
               <BestSellingStore />
             </div>
           </div>
@@ -152,7 +152,7 @@ const Home = () => {
       </section>
 
 
-      <section className='service_to_help_your_shop'>
+      <section className='service_to_help_your_shop mt-5'>
         <div className='container pt-3'>
           <div className='row'>
             <div className='head pb-3'>
@@ -163,17 +163,14 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='line_hr'>
+      <section className='line_hr mt-5 mb-5'>
         <div className='container'>
           <hr></hr>
         </div>
       </section>
 
 
-      
-
-
-    </div>
+  </div>
   )
 }
 
