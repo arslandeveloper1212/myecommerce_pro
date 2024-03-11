@@ -8,7 +8,7 @@ const Choosebybrand = () => {
        <div>
         
            <div className='col-12'>
-           <div className='choosebybrand_controls flex-wrap d-flex align-items-center' style={{gap:"27px"}}>
+           <div className='choosebybrand_controls flex-wrap d-flex align-items-center justify-content-center' style={{gap:"27px"}}>
            {
             datahere.map((item,i)=>{
                 return(

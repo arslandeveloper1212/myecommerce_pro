@@ -4,6 +4,7 @@ import CartData from "../../Pages/CartData";
 
 const initialState = {
     totalPrice:0,
+   
     totalQuantity: 0,
     products: CartData,
     cart:[],
@@ -83,6 +84,8 @@ const cartSlice = createSlice({
             return item;
           }).filter(Boolean); 
         }
+
+      
        
         
                 

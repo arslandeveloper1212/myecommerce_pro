@@ -107,7 +107,7 @@ const Home = () => {
                 <button className='btn_green_class mt-4'>Learn More</button>
               </div>
               <div className='col-lg-6 col-md-6 col-12'>
-                <img src='/img/card.png' className='img-fluid mt-sm-4' />
+                <img src='/img/card.png' className='img-fluid mt-sm-4 m-auto d-flex' />
               </div>
             </div>
           </div>

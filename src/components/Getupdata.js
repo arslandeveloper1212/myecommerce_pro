@@ -99,3 +99,15 @@ export const FrequentlyAskedQuestiondetail=[
         image: "/img/fa3.png"
     }
 ]
+
+
+export const footer = [
+    {
+        "Department": 
+        ["Macbook", "Towel", "Headphone", "Tablet"],
+        "About Us": 
+        ["Macbook", "Towel", "Headphone", "Tablet"],
+        "Services": ["Macbook", "Towel", "Headphone", "Tablet"],
+        "Help": ["Macbook", "Towel", "Headphone", "Tablet"]
+      }
+]

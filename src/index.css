@@ -254,3 +254,15 @@ font-size: 20px;
     width: 80%;
   }
 }
+
+
+
+@media (max-width: 576px) {
+  
+    .topnav_bg{
+      display: none;
+    }
+    .shop_our_top_categories .shopour, .getupto, .card_controls_allproduct  {
+    justify-content: center;
+    }
+}

@@ -9,7 +9,7 @@ const GetUpTo = () => {
             <div className='row'>
                 <div className='col-3 col-12'>
                     <div className='getupto_controls mt-3 mb-3'>
-                        <div className='d-flex flex-wrap justify-content-sm-center gap-5'>
+                        <div className='d-flex flex-wrap getupto justify-content-sm-center gap-5'>
                             {
                                 item.map((e, i) => {
                                     return (

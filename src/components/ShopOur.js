@@ -7,12 +7,12 @@ const ShopOur = () => {
     return (
         <div>
             <div className='col-12'>
-                <div className='d-flex flex-wrap align-items-center' style={{gap:"27px"}}>
+                <div className='d-flex flex-wrap align-items-center shopour' style={{gap:"27px"}}>
                     {
                         item.map((e, i) => {
                             return (
                                 <div>
-                                    <div className="card text-white align-items-center position-relative" style={{ width: "12rem", fontFamily:"Roboto" }}>
+                                    <div className="card text-white align-items-center  position-relative" style={{ width: "12rem", fontFamily:"Roboto" }}>
                                        <div className='zoom-img_width'>
                                        <img src={e.image} className="card-img-top" alt="..." />
                                        </div>
