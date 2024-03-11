@@ -11,6 +11,7 @@ import {Routes,Route} from 'react-router-dom';
 import CartDataPage from './components/Pages/CartDataPage';
 import PagenotFound from './components/PagenotFound';
 import CartDetailPage from './components/Pages/CartDetailPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
     <Route path='/cartdatapage/:id' element={<CartDetailPage/>}/>
    <Route path='*' element= <PagenotFound/> />
    </Routes>
+   <Footer/>
     </div>
   );
 }

@@ -39,3 +39,63 @@ const getupdata = [
 ]
 
 export default getupdata;
+
+
+
+export const SellingStore=[
+    {
+        image: "/img/g1.png",
+        imgh1: "/img/h1.png",
+        text: "Staples",
+        desc: "Bag & Perfume",
+        icon: "/img/delivery.png",
+        icontext:"Delivery with in 24 hours"
+ 
+     },
+     {
+        image: "/img/g2.png",
+        imgh1: "/img/h2.png",
+        text: "Now Delivery",
+        desc: "Bag & Perfume",
+        icon: "/img/delivery.png",
+        icontext:"Delivery with in 24 hours"
+ 
+     },
+     {
+        image: "/img/g3.png",
+        imgh1: "/img/h3.png",
+        text: "Bevmo",
+        desc: "Bag & Perfume",
+        icon: "/img/delivery.png",
+        icontext:"Delivery with in 24 hours"
+ 
+     },
+     {
+        image: "/img/g4.png",
+        imgh1: "/img/h4.png",
+        text: "Quicklly",
+        desc: "Bag & Perfume",
+        icon: "/img/delivery.png",
+        icontext:"Delivery with in 24 hours"
+ 
+     }
+]
+
+
+export const FrequentlyAskedQuestiondetail=[
+    {
+        question: "Frequently Asked Questions",
+        para: "Updates on safe Shopping in our Stores",
+        image: "/img/fa.png"
+    },
+    {
+        question: "Online Payment Process",
+        para: "Updates on safe Shopping in our Stores",
+        image: "/img/fa2.png"
+    },
+    {
+        question: "Home Delivery Options",
+        para: "Updates on safe Shopping in our Stores",
+        image: "/img/fa3.png"
+    }
+]

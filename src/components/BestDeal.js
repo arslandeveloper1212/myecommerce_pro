@@ -60,7 +60,7 @@ const BestDeal = () => {
             <Slider {...settings}>
                 <div>
 
-                    <div className='bestdeal_hit'>
+                    <div className='bestdeal_hit zoom-img'>
                         <img src='./img/d1.png' alt='homepod mini' />
                     </div>
                     <div>
@@ -76,7 +76,7 @@ const BestDeal = () => {
                 </div>
                 <div>
 
-                    <div className='bestdeal_hit'>
+                    <div className='bestdeal_hit zoom-img'>
                         <img src='./img/d2.png' alt='homepod mini' />
                     </div>
                     <div>
@@ -94,7 +94,7 @@ const BestDeal = () => {
                 </div>
                 <div>
 
-                    <div className='bestdeal_hit'>
+                    <div className='bestdeal_hit zoom-img'>
                         <img src='./img/d3.png' alt='homepod mini' />
                     </div>
                     <div >
@@ -110,7 +110,7 @@ const BestDeal = () => {
 
                 <div>
 
-                    <div className='bestdeal_hit'>
+                    <div className='bestdeal_hit zoom-img'>
                         <img src='./img/d4.png' alt='homepod mini' />
                     </div>
                     <div >
@@ -127,7 +127,7 @@ const BestDeal = () => {
 
                 <div>
 
-                    <div className='bestdeal_hit'>
+                    <div className='bestdeal_hit zoom-img'>
                         <img src='./img/d5.png' alt='homepod mini' />
                     </div>
                     <div >
@@ -144,7 +144,7 @@ const BestDeal = () => {
 
                 <div>
 
-                    <div className='bestdeal_hit'>
+                    <div className='bestdeal_hit zoom-img'>
                         <img src='./img/d6.png' alt='homepod mini' />
                     </div>
                     <div >

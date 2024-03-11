@@ -58,7 +58,8 @@ const MostSellingComponent = () => {
             <Slider {...settings}>
                 {MostSelling.map((item, index) => (
                     <div key={index} >
-                        <div className='bestdeal_hit'>
+                    
+                        <div className='bestdeal_hit zoom-img_width'>
                             <img src={item.image} alt={item.title} />
                         </div>
                         <div>

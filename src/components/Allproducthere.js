@@ -20,9 +20,9 @@ const Allproducthere = () => {
 
     return (
         <div className='container'>
-            <div className='row'>
+            <div className='row d-flex justify-content-between'>
             <div className='col-lg-2'>
-            <div className='p-addtocart d-flex flex-column'>
+            <div className='p-addtocart d-flex flex-column' style={{gap:"20px"}}>
                     <button onClick={() => handleCategoryClick("macbook")}>Macbook</button>
                     <button onClick={() => handleCategoryClick("towel")}>Towel</button>
                     <button onClick={() => handleCategoryClick("headphone")}>Headphone</button>
@@ -32,12 +32,15 @@ const Allproducthere = () => {
                 </div>
             </div>
                 <div class='col-lg-10'>
-                <div className='card_controls_allproduct d-flex flex-wrap' style={{ gap: "10px" }}>
+                <div className='card_controls_allproduct d-flex flex-wrap' style={{ gap: "40px" }}>
                     {data && data.filter(item => !selectedCategory || item.category === selectedCategory).map((item, i) => (
                         <div key={i}>
                             <div class="card mb-4 border-0" style={{ width: "18rem", cursor: "pointer", background: "#f5f6f6" }}>
                                 <Link to={`/cartdatapage/${item.id}`} style={{ textDecoration: "none" }}>
+                                    <div class="zoom-img">
                                     <img class="card-img-top" src={item.image} alt="Card image cap" className='bestdeal_hit img-fluid h-25' style={{ height: "15rem", width: "100%", padding: "20px" }} />
+                                    </div>
+                                
                                 </Link>
                                 <div class="card-body">
                                     <div className='card_controls_content d-flex justify-content-between'>

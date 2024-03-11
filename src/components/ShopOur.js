@@ -13,7 +13,10 @@ const ShopOur = () => {
                             return (
                                 <div>
                                     <div className="card text-white align-items-center position-relative" style={{ width: "12rem", fontFamily:"Roboto" }}>
-                                        <img src={e.image} className="card-img-top" alt="..." />
+                                       <div className='zoom-img_width'>
+                                       <img src={e.image} className="card-img-top" alt="..." />
+                                       </div>
+                                    
                                         <div className="card-body position-absolute">
                                             <h5 className="card-title text-center m-auto">{e.title}</h5>
 

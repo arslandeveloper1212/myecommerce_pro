@@ -7,6 +7,9 @@ import GetUpTo from '../GetUpTo'
 import Allproducthere from '../Allproducthere'
 import MostSelling from '../MostSelling'
 import TrendingProducts from '../TrendingProducts'
+import BestSellingStore from '../BestSellingStore'
+import { FrequentlyAskedQuestion } from '../FrequentlyAsked'
+import Footer from '../Footer'
 
 
 
@@ -126,15 +129,49 @@ const Home = () => {
       </section>
 
       <section className='Trending_Products_For_You!'>
-      <div className='container pt-3'>
-            <div className='row'>
-              <div className='head pb-3'>
-                <h1>Trending Products For You</h1>
-                <TrendingProducts/>
-              </div>
+        <div className='container pt-3'>
+          <div className='row'>
+            <div className='head pb-3'>
+              <h1>Trending Products For You</h1>
+              <TrendingProducts />
             </div>
           </div>
+        </div>
       </section>
+
+
+      <section className='best_selling_store'>
+        <div className='container pt-3'>
+          <div className='row'>
+            <div className='head pb-3'>
+              <h1>Best Selling Store</h1>
+              <BestSellingStore />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className='service_to_help_your_shop'>
+        <div className='container pt-3'>
+          <div className='row'>
+            <div className='head pb-3'>
+              <h1>Service To Help Your Shop</h1>
+              <FrequentlyAskedQuestion />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='line_hr'>
+        <div className='container'>
+          <hr></hr>
+        </div>
+      </section>
+
+
+      
+
 
     </div>
   )

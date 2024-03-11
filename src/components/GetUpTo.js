@@ -14,18 +14,21 @@ const GetUpTo = () => {
                                 item.map((e, i) => {
                                     return (
                                         <div key={i}>
-                                            <div className="card zoom-img " style={{ width: "18rem",height:"25rem", backgroundColor: e.backgroundColor, border: "none" }}>
+                                            <div className="card zoom-img " style={{ width: "18rem", height: "25rem", backgroundColor: e.backgroundColor, border: "none" }}>
 
                                                 <div className="card-body">
                                                     <h2 className="card-title m-auto">{e.heading}</h2>
                                                     <div className=' d-flex mx-2 mt-2'>
-                                                    <h2 style={{color:e.color}}><span>$</span>{e.price}</h2>
+                                                        <h2 style={{ color: e.color }}><span>$</span>{e.price}</h2>
                                                     </div>
                                                     <p>{e.desc}</p>
 
 
                                                 </div>
+                                                <div  class="zoom-img" >
                                                 <img src={e.image} className="card-img-end" alt="..." />
+                                                </div>
+                                                
                                             </div>
 
                                         </div>
