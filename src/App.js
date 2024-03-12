@@ -12,6 +12,7 @@ import CartDataPage from './components/Pages/CartDataPage';
 import PagenotFound from './components/PagenotFound';
 import CartDetailPage from './components/Pages/CartDetailPage';
 import Footer from './components/Footer';
+import ShopPage from './components/Pages/ShopPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
    <Route path= '/' element= {<Home/>}/>
     <Route path= '/cartdatapage' element= {<CartDataPage/>}/>
     <Route path='/cartdatapage/:id' element={<CartDetailPage/>}/>
+    <Route path='/shop' element={<ShopPage/>}/>
    <Route path='*' element= <PagenotFound/> />
    </Routes>
    <Footer/>

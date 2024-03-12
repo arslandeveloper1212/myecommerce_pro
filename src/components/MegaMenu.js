@@ -26,8 +26,8 @@ function MegaMenu() {
             ]
            },
            {
-            label: "Cart",
-            key: "Cart",
+            label: "Shop",
+            key: "Shop",
           
            },
            {
