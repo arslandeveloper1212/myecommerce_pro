@@ -51,7 +51,7 @@ const ShopPage = () => {
 
     return (
         <div>
-            <div className='container'>
+            <div className='container mt-5'>
                 <div className='row'>
                     <div className='col-md-2 col-lg-2 col-12'>
                         
@@ -90,19 +90,19 @@ const ShopPage = () => {
                         </div>
                     </div>
                     <div className='col-lg-10 col-md-10 col-12'>
-                        <div className='sorting_detail_algorithm d-flex justify-content-end'>
+                        <div className='sorting_detail_algorithm d-flex justify-content-end px-4'>
                             <select onChange={(e) => handleSort(e.target.value)}>
                                 <option value="asc">Sort by A-Z</option>
                                 <option value="desc">Sort by Z-A</option>
                             </select>
                         </div>
 
-                        <div className='card_controls_allproduct d-flex flex-wrap' style={{ gap: "100px" }}>
+                        <div className='card_controls_allproduct d-flex flex-wrap px-5'>
                             {sortedProducts
                                 .filter(item => !selectedCategory || item.category === selectedCategory)
                                 .map((item, i) => (
                                     <div key={i}>
-                                        <div class="card mb-4 border-0" style={{ width: "18rem", cursor: "pointer", background: "#f5f6f6" }}>
+                                        <div class="card mb-4 border-0" style={{ width: "18rem", cursor: "pointer", background: "#f5f6f6", gap:"10px" }}>
                                             <Link to={`/cartdatapage/${item.id}`} style={{ textDecoration: "none" }}>
                                                 <div class="zoom-img">
                                                     <img class="card-img-top" src={item.image} alt="Card image cap" className='bestdeal_hit img-fluid h-25' style={{ height: "15rem", width: "100%", padding: "20px" }} />
