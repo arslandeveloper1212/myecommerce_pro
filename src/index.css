@@ -247,16 +247,24 @@ font-size: 20px;
   border-radius: 5px;
  }
 
+ .banner_inner_media_query .container{
+  display: none;
+ }
 
  
  @media (max-width: 768px) {
   .green_bannerinner_background {
     width: 80%;
   }
-  .section_nav_wrapper{
-    border: 1px solid red;
-    display: none;
+  .section_nav_wrapper, .mega_menu_list_navbar{
+   display: none;
   }
+  .banner_inner_here img, .green_bannerinner_background{
+    display: none !important;
+  }
+  .banner_inner_media_query .container{
+    display: block;
+   }
 }
 
 

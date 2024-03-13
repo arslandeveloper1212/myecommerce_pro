@@ -68,7 +68,7 @@ const Home = () => {
 
       <section className='banner_inner_here mt-5 position-relative d-flex justify-content-center align-items-center'>
         <img src='/img/bs.png' alt='title' style={{ width: "100%" }} />
-        <div className='green_bannerinner_background position-absolute top-50 end-0 translate-middle-y p-5 pr-3' style={{ objectFit: "cover", marginRight: "53px;" }}>
+        <div className='green_bannerinner_background position-absolute top-50 end-0 translate-middle-y p-lg-5 p-md-5 p-0  pr-3' style={{ objectFit: "cover", marginRight: "53px;" }}>
           <div>
             <h1>Get 5% Cash Back <br /> On $200</h1>
             <p>Shopping is a bit of a relaxing hobby for me, <br /> which is sometimes troubling for the bank balance.</p>
@@ -78,6 +78,20 @@ const Home = () => {
         </div>
       </section>
 
+      <section className='d-flex justify-content-center banner_inner_media_query  align-items-center' style={{background:"#003d29"}}>
+        <div className='container'>
+          <div className='row' style={{color:"white", padding:"20px"}}>
+            <div className='col-12' style={{textAlign:"center"}}>
+              <h1>Get 5% Cash Back <br /> On $200</h1>
+              <p>Shopping is a bit of a relaxing hobby for me, <br /> which is sometimes troubling for the bank balance.</p>
+              <button className='btn_class'>Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
 
 
 
@@ -86,7 +100,7 @@ const Home = () => {
         <div className='container pt-3'>
           <div className='row'>
             <div className='head pb-3'>
-              <h1  className='mb-5'>Today Best Deals For You!</h1>
+              <h1 className='mb-5'>Today Best Deals For You!</h1>
             </div>
             <Allproducthere />
 
@@ -120,7 +134,7 @@ const Home = () => {
           <div className='container pt-3'>
             <div className='row'>
               <div className='head pb-3'>
-                <h1  className='mb-5'>Most Selling Products</h1>
+                <h1 className='mb-5'>Most Selling Products</h1>
                 <MostSelling />
               </div>
             </div>
@@ -144,7 +158,7 @@ const Home = () => {
         <div className='container pt-3'>
           <div className='row'>
             <div className='head pb-3'>
-              <h1  className='mb-5'>Best Selling Store</h1>
+              <h1 className='mb-5'>Best Selling Store</h1>
               <BestSellingStore />
             </div>
           </div>
@@ -170,7 +184,7 @@ const Home = () => {
       </section>
 
 
-  </div>
+    </div>
   )
 }
 

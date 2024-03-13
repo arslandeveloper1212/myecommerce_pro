@@ -29,7 +29,7 @@ const Navbar = () => {
 
               <Link to="/"> <img src='https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e86ab4c21faa7bc0bd90dd_Logo.svg' className='img-fluid' alt='logo' />
               </Link>
-              <div className='d-none d-lg-block d-md-block'>
+              <div className='mega_menu_list_navbar'>
                 <MegaMenu />
               </div>
 
