@@ -17,16 +17,16 @@ function MegaMenu() {
     };
 
     const item = useSelector(state => state.allcart.cart)
-    console.log(item.length)
+    console.log(item.length);
 
     const Navigate = useNavigate();
 
     const handleClick = (e) => {
-      Navigate("/cartdatapage")
+        Navigate("/cartdatapage")
     }
     return (
         <div style={{ backgroundColor: "white" }}>
-           
+
             <Drawer
                 title="Sub Category"
                 placement="right"
@@ -40,15 +40,15 @@ function MegaMenu() {
                     <PersonOutlineIcon />
                     <span className='mb-0' style={{ cursor: "pointer" }}>Account </span>
                     &nbsp;
-                    <Badge badgeContent={item.length} color="primary" > 
-                        <AddShoppingCartIcon onClick={handleClick} style={{cursor:"pointer"}} />
+                    <Badge badgeContent={item.length} color="primary">
+                        <AddShoppingCartIcon onClick={handleClick} style={{ cursor: "pointer" }} />
                     </Badge>
-    </div>
+                </div>
             </Drawer>
-            <ToggleButton 
-                style={{ border: "none" }} 
-                value="right" 
-                aria-label="right aligned" 
+            <ToggleButton
+                style={{ border: "none" }}
+                value="right"
+                aria-label="right aligned"
                 onClick={toggleDrawer}
             >
                 <FormatAlignRightIcon />
@@ -59,7 +59,7 @@ function MegaMenu() {
 
 function MegaList() {
     return (
-        <Space direction='vertical'>
+        <Space direction='horizontal'>
             <Menu>
                 <Menu.Item key="Furniture">
                     <Link to="/furniture">Furniture</Link>
