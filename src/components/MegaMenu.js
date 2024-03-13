@@ -17,8 +17,6 @@ function MegaMenu() {
                                 style: {
                                     height: "fit-content",
                                     backgroundColor: "white",
-
-
                                 }
                             }
 
@@ -50,19 +48,16 @@ function MegaMenu() {
 function MegaList() {
     return (
         <div >
-            <Typography.Title style={{ paddingTop: "10px" }} level={3}>Sub Category</Typography.Title>
+            <Typography.Title style={{ padding:"10px" }} level={3}>Sub Category</Typography.Title>
             <Space direction='horizontal'>
-                <Menu items={
+                <Menu  items={
                     [
                         {
                             label: <Link style={{ textDecoration: "none" }} to="/furniture">Furniture</Link>,
                             key: "Furniture",
 
                         },
-                        {
-                            label: <Link style={{ textDecoration: "none" }} to="/shoe">Shoe</Link>,
-                            key: "Shoe",
-                        },
+                        
                         {
                             label: <Link style={{ textDecoration: "none" }} to="/Laptop">Laptop</Link>,
                             key: "Laptop",
@@ -80,10 +75,7 @@ function MegaList() {
                         label: <Link style={{ textDecoration: "none" }} to="/headphone">Headphone</Link>,
                         key: "Headphone",
                     },
-                    {
-                        label: <Link style={{ textDecoration: "none" }} to="/book">Book</Link>,
-                        key: "Book",
-                    },
+                    
                 ]}
                     style={{ border: "none", boxShadow: "none" }}
                 />
