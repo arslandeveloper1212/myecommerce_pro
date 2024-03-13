@@ -253,6 +253,10 @@ font-size: 20px;
   .green_bannerinner_background {
     width: 80%;
   }
+  .section_nav_wrapper{
+    border: 1px solid red;
+    display: none;
+  }
 }
 
 
@@ -265,4 +269,9 @@ font-size: 20px;
     .shop_our_top_categories .shopour, .getupto, .card_controls_allproduct  {
     justify-content: center;
     }
+     .navbar_controls form, .section_nav_wrapper{
+      border: 1px solid red;
+      display: none !important;
+    }
+    
 }

@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addcart } from './Redux/slices/cartslices';
 import RatingStar from './RatingStar';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Allproducthere = () => {
     const dispatch = useDispatch();
@@ -11,15 +13,16 @@ const Allproducthere = () => {
 
     const add = (item) => {
         dispatch(addcart(item));
+        toast.success(`${item.title} added to cart`);
     };
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
     };
 
-  
     return (
         <div className='container'>
+            <ToastContainer /> 
             <div className='row d-flex justify-content-between'>
                 <div className='col-lg-2'>
                     <div className='p-addtocart d-flex flex-column' style={{ gap: "20px" }}>
@@ -60,10 +63,6 @@ const Allproducthere = () => {
                             ))}
                     </div>
                 </div>
-            </div>
-            <div>
-                
-               
             </div>
         </div>
     );

@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addcart } from '../Redux/slices/cartslices';
 import RatingStar from '../RatingStar';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ShopPage = () => {
     const dispatch = useDispatch();
@@ -19,6 +21,7 @@ const ShopPage = () => {
 
     const add = (item) => {
         dispatch(addcart(item));
+        toast.success(`${item.title} added to cart`);
     };
 
     const handleCategoryClick = (category) => {
@@ -52,6 +55,7 @@ const ShopPage = () => {
     return (
         <div>
             <div className='container mt-5'>
+            <ToastContainer /> 
                 <div className='row'>
                     <div className='col-md-2 col-lg-2 col-12'>
                         
