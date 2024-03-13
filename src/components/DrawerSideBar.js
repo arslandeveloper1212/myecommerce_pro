@@ -6,6 +6,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import { useNavigate } from 'react-router-dom';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import CloseIcon from '@mui/icons-material/Close'; // Import CloseIcon
 import { useSelector } from 'react-redux';
 const { SubMenu } = Menu;
 
@@ -16,19 +17,23 @@ function MegaMenu() {
         setDrawerVisible(!drawerVisible);
     };
 
-    const item = useSelector(state => state.allcart.cart)
-    console.log(item.length);
-
+    const item = useSelector(state => state.allcart.cart);
     const Navigate = useNavigate();
 
-    const handleClick = (e) => {
-        Navigate("/cartdatapage")
-    }
+    const handleClick = () => {
+        Navigate("/cartdatapage");
+    };
+
     return (
         <div style={{ backgroundColor: "white" }}>
 
             <Drawer
-                title="Sub Category"
+                title={
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span>Sub Category</span>
+                        <CloseIcon style={{ cursor: 'pointer' }} onClick={toggleDrawer} />
+                    </div>
+                }
                 placement="right"
                 closable={false}
                 onClose={toggleDrawer}
@@ -36,6 +41,9 @@ function MegaMenu() {
                 width={300}
             >
                 <MegaList />
+                <div className="shop-link mt-5">
+                    <Link style={{textDecoration:"none", color:"black"}} to="/shop">Shop</Link>
+                </div>
                 <div className='section_nav_wrapper_clicked mt-5'>
                     <PersonOutlineIcon />
                     <span className='mb-0' style={{ cursor: "pointer" }}>Account </span>
@@ -45,6 +53,7 @@ function MegaMenu() {
                     </Badge>
                 </div>
             </Drawer>
+
             <ToggleButton
                 style={{ border: "none" }}
                 value="right"
@@ -62,18 +71,18 @@ function MegaList() {
         <Space direction='horizontal'>
             <Menu>
                 <Menu.Item key="Furniture">
-                    <Link to="/furniture">Furniture</Link>
+                    <Link style={{textDecoration:"none", color:"black"}} to="/furniture">Furniture</Link>
                 </Menu.Item>
                 <Menu.Item key="Laptop">
-                    <Link to="/laptop">Laptop</Link>
+                    <Link style={{textDecoration:"none", color:"black"}} to="/laptop">Laptop</Link>
                 </Menu.Item>
             </Menu>
             <Menu>
                 <Menu.Item key="HandBag">
-                    <Link to="/hand-bag">Hand Bag</Link>
+                    <Link style={{textDecoration:"none", color:"black"}} to="/hand-bag">Hand Bag</Link>
                 </Menu.Item>
                 <Menu.Item key="Headphone">
-                    <Link to="/headphone">Headphone</Link>
+                    <Link style={{textDecoration:"none", color:"black"}} to="/headphone">Headphone</Link>
                 </Menu.Item>
             </Menu>
         </Space>
