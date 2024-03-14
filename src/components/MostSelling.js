@@ -62,12 +62,17 @@ const MostSellingComponent = () => {
                         <div className='bestdeal_hit zoom-img_width'>
                             <img src={item.image} alt={item.title} />
                         </div>
-                        <div>
+                        <div className='bestdeal_content'>
                             <h4>{item.title}</h4>
                             <strong>${item.price}</strong>
+                            <p className='mb-0 mt-2'>{item.description}</p>
+                           <div className='d-flex align-items-center gap-2'>
+                           <RatingStar />
+                            <span>{item.rating}</span>
+                           </div>
+                            
                         </div>
-                        <p className='mb-0 mt-2'>{item.description}</p>
-                        <RatingStar />
+                       
                         
                     </div>
                 ))}

@@ -1,13 +1,13 @@
 import React from 'react';
-import { Menu, Drawer, Space, Badge } from 'antd';
+import { Menu, Drawer, Space } from 'antd';
 import { Link } from 'react-router-dom';
 import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 import ToggleButton from '@mui/material/ToggleButton';
-import { useNavigate } from 'react-router-dom';
+
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 import CloseIcon from '@mui/icons-material/Close'; // Import CloseIcon
-import { useSelector } from 'react-redux';
+
 const { SubMenu } = Menu;
 
 function MegaMenu() {
@@ -17,12 +17,7 @@ function MegaMenu() {
         setDrawerVisible(!drawerVisible);
     };
 
-    const item = useSelector(state => state.allcart.cart);
-    const Navigate = useNavigate();
-
-    const handleClick = () => {
-        Navigate("/cartdatapage");
-    };
+    
 
     return (
         <div style={{ backgroundColor: "white" }}>
@@ -48,9 +43,7 @@ function MegaMenu() {
                     <PersonOutlineIcon />
                     <span className='mb-0' style={{ cursor: "pointer" }}>Account </span>
                     &nbsp;
-                    <Badge badgeContent={item.length} color="primary">
-                        <AddShoppingCartIcon onClick={handleClick} style={{ cursor: "pointer" }} />
-                    </Badge>
+                    
                 </div>
             </Drawer>
 

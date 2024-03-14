@@ -21,7 +21,7 @@ const Allproducthere = () => {
     };
 
     return (
-        <div className='container'>
+        <div className='container mb-3'>
             <ToastContainer /> 
             <div className='row d-flex justify-content-between'>
                 <div className='col-lg-2'>

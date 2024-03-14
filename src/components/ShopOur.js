@@ -6,7 +6,7 @@ const ShopOur = () => {
     console.log(item);
     return (
         <div>
-            <div className='col-12'>
+            <div className='col'>
                 <div className='d-flex flex-wrap align-items-center shopour' style={{gap:"27px"}}>
                     {
                         item.map((e, i) => {

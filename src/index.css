@@ -247,7 +247,7 @@ font-size: 20px;
   border-radius: 5px;
  }
 
- .banner_inner_media_query .container{
+ .banner_inner_media_query .container, .badge-hidden{
   display: none;
  }
 
@@ -265,6 +265,12 @@ font-size: 20px;
   .banner_inner_media_query .container{
     display: block;
    }
+   .delivery_css{
+    margin-bottom: 20px;
+   }
+   .badge-hidden{
+    display: block;
+   }
 }
 
 
@@ -278,8 +284,22 @@ font-size: 20px;
     justify-content: center;
     }
      .navbar_controls form, .section_nav_wrapper{
-      border: 1px solid red;
+      
       display: none !important;
     }
+    .bestdeal_hit{
+     
+      width: 100%;
+    }
+    .bestdeal_content{
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   }
+   .padding_trending_given,.delivery_css{
+    margin-bottom: 20px;
+   }
     
 }

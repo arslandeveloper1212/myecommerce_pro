@@ -98,36 +98,95 @@ export const MostSelling = [
         image: "/img/allpro/p1.png",
         title: "HomePod mini",
         price: "239.00",
-        description: "Table with air purifier, stained veneer/black"
+        description: "Table with air purifier, stained veneer/black",
+        rating: "(232)",
     },
     {
         id: 2,
         image: "/img/allpro/p2.png",
         title: "Instax Mini 9",
         price: "99.00",
-        description: "Selfie mode and selfie mirror, Macro mode"
+        description: "Selfie mode and selfie mirror, Macro mode",
+        rating: "(2432)",
     },
     {
         id: 3,
         image: "/img/allpro/p3.png",
         title: "Base Camp Duffel M",
         price: "159.00",
-        description: "Table with air purifier, stained veneer/black"
+        description: "Table with air purifier, stained veneer/black",
+        rating: "(2321)",
     },
     {
         id: 4,
         image: "/img/allpro/p4.png",
         title: "Base Camp Duffel M",
         price: "159.00",
-        description: "Table with air purifier, stained veneer/black"
+        description: "Table with air purifier, stained veneer/black",
+        rating: "(11232)",
     },
     {
         id: 5,
         image: "/img/allpro/p5.png",
         title: "Base Camp Duffel M",
         price: "159.00",
-        description: "Table with air purifier, stained veneer/black"
+        description: "Table with air purifier, stained veneer/black",
+        rating: "(2332)",
     }
+
+
+]
+
+
+export const bestDeal = [
+    {
+        id: 1,
+        image: "./img/d1.png",
+        title: "HomePod mini",
+        price: " 239.00",
+        description: "Table with air purifier, staned veneer/black",
+        rating: "(1132)",
+    },
+    {
+        id: 2,
+        image: "./img/d2.png",
+        title: "Instax Mini 9",
+        price: " 99.00",
+        description: "Selfie mode and selfie mirror, Macro mode",
+        rating: "(1122)",
+    },
+    {
+        id: 3,
+        image: "./img/d3.png",
+        title: "Base Camp Duffel M",
+        price: " 159.00",
+        description: "Table with air purifier, staned veneer/black",
+        rating: "(1211)",
+    },
+    {
+        id: 4,
+        image: "./img/d4.png",
+        title: "Base Camp Duffel M",
+        price: " 159.00",
+        description: "Table with air purifier, staned veneer/black",
+        rating: "(121)",
+    },
+    {
+        id: 5,
+        image: "./img/d5.png",
+        title: "Base Camp Duffel M",
+        price: "159.00",
+        description: "Table with air purifier, staned veneer/black",
+        rating: "(141)",
+    },
+    {
+        id: 6,
+        image: "./img/d6.png",
+        title: "Base Camp Duffel M",
+        price: "159.00",
+        description: "Table with air purifier, staned veneer/black",
+        rating: "(115)",
+    },
 
 
 ]

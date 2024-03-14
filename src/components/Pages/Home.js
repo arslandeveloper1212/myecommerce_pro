@@ -78,10 +78,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='d-flex justify-content-center banner_inner_media_query  align-items-center' style={{background:"#003d29"}}>
+      <section className='d-flex justify-content-center banner_inner_media_query  align-items-center' style={{ background: "#003d29" }}>
         <div className='container'>
-          <div className='row' style={{color:"white", padding:"20px"}}>
-            <div className='col-12' style={{textAlign:"center"}}>
+          <div className='row' style={{ color: "white", padding: "45px" }}>
+            <div className='col-12' style={{ textAlign: "center" }}>
               <h1>Get 5% Cash Back <br /> On $200</h1>
               <p>Shopping is a bit of a relaxing hobby for me, <br /> which is sometimes troubling for the bank balance.</p>
               <button className='btn_class'>Learn More</button>
@@ -96,7 +96,7 @@ const Home = () => {
 
 
 
-      <section className='Product_detail_here mt-5'>
+      <section className='Product_detail_here mt-5 mb-5'>
         <div className='container pt-3'>
           <div className='row'>
             <div className='head pb-3'>
@@ -146,7 +146,7 @@ const Home = () => {
         <div className='container pt-3'>
           <div className='row'>
             <div className='head pb-3'>
-              <h1 className='mb-5'>Trending Products For You</h1>
+              <h1 className='px-3'>Trending Products For You</h1>
               <TrendingProducts />
             </div>
           </div>

@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <div>
 
-      <div className='navbar_hit'>
+      <div className='navbar_hit position-relative'>
         <Topnav />
         <div className='container '>
           <div className='row'>
@@ -46,7 +46,6 @@ const Navbar = () => {
                 &nbsp;
                 <Badge badgeContent={item.length} color="primary">
                   <AddShoppingCartIcon onClick={handleClick} />
-
                 </Badge>
 
 
@@ -55,11 +54,20 @@ const Navbar = () => {
 
           </div>
 
-          <div className='row d-lg-none d-md-none d-sm-block' style={{ marginTop: "10px", paddingRight: "10px", position: "absolute", top: "0px", right: "0px" }}>
+          <div className='row d-flex d-lg-none d-md-none d-sm-block' style={{ marginTop: "10px", paddingRight: "10px", position: "absolute", top: "0px", right: "0px" }}>
             <DrawerSideBar />
+
           </div>
+          
         </div>
 
+
+        <div className='badge-hidden' style={{position:"absolute", top:"0",right:"0", marginTop:"21px", marginRight:"65px", cursor:"pointer"}}>
+        <Badge badgeContent={item.length} color="primary">
+            <AddShoppingCartIcon onClick={handleClick} />
+          </Badge>
+        </div>
+        
       </div>
     </div>
 
