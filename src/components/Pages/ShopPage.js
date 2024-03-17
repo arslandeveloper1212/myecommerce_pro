@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addcart } from '../Redux/slices/cartslices';
@@ -8,16 +9,17 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ShopPage = () => {
     const dispatch = useDispatch();
-    const data = useSelector(state => state.allcart.products);
+    const allProducts = useSelector(state => state.allcart.products);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [sortOrder, setSortOrder] = useState('asc');
-    const [sortedProducts, setSortedProducts] = useState(data);
+    const [sortedProducts, setSortedProducts] = useState(allProducts);
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
-        setSortedProducts(data);
-    }, [data]);
+        setSortedProducts(allProducts);
+    }, [allProducts]);
 
     const add = (item) => {
         dispatch(addcart(item));
@@ -40,7 +42,7 @@ const ShopPage = () => {
     };
 
     const handlePriceFilter = () => {
-        let filteredProducts = [...data];
+        let filteredProducts = [...allProducts];
 
         if (minPrice !== '') {
             filteredProducts = filteredProducts.filter(item => parseFloat(item.price) >= parseFloat(minPrice));
@@ -50,6 +52,19 @@ const ShopPage = () => {
         }
 
         setSortedProducts(filteredProducts);
+    };
+
+    const handleSearch = () => {
+        let searchedProducts = [...allProducts];
+
+        if (searchTerm !== '') {
+            searchedProducts = searchedProducts.filter(item =>
+                item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                item.category.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        }
+
+        setSortedProducts(searchedProducts);
     };
 
     return (
@@ -96,15 +111,15 @@ const ShopPage = () => {
                     <div className='col-lg-10 col-md-10 col-12'>
                         <div className='row'>
                             <div className="col-4">
-                            <div className='sorting_detail_algorithm d-flex justify-content-end px-4'>
-                            <select class="form-select" aria-label="Default select example" onChange={(e) => handleSort(e.target.value)}>
-                                <option value="asc">Sort by A-Z</option>
-                                <option value="desc">Sort by Z-A</option>
-                            </select>
-                        </div>
+                                <div className='sorting_detail_algorithm d-flex justify-content-end px-4'>
+                                    <select class="form-select" aria-label="Default select example" onChange={(e) => handleSort(e.target.value)}>
+                                        <option value="asc">Sort by A-Z</option>
+                                        <option value="desc">Sort by Z-A</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                       
+
 
                         <div className='card_controls_allproduct d-flex flex-wrap px-5'>
                             {sortedProducts
@@ -137,14 +152,7 @@ const ShopPage = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default ShopPage;
-
-
-
-
-
-
-

@@ -64,18 +64,18 @@ function MegaList() {
         <Space direction='horizontal'>
             <Menu>
                 <Menu.Item key="Furniture">
-                    <Link style={{textDecoration:"none", color:"black"}} to="/furniture">Furniture</Link>
+                    <Link style={{textDecoration:"none", color:"black"}} to="/category/furniture">Furniture</Link>
                 </Menu.Item>
                 <Menu.Item key="Laptop">
-                    <Link style={{textDecoration:"none", color:"black"}} to="/laptop">Laptop</Link>
+                    <Link style={{textDecoration:"none", color:"black"}} to="/category/laptop">Laptop</Link>
                 </Menu.Item>
             </Menu>
             <Menu>
                 <Menu.Item key="HandBag">
-                    <Link style={{textDecoration:"none", color:"black"}} to="/hand-bag">Hand Bag</Link>
+                    <Link style={{textDecoration:"none", color:"black"}} to="/category/hand-bag">Hand Bag</Link>
                 </Menu.Item>
                 <Menu.Item key="Headphone">
-                    <Link style={{textDecoration:"none", color:"black"}} to="/headphone">Headphone</Link>
+                    <Link style={{textDecoration:"none", color:"black"}} to="/category/headphone">Headphone</Link>
                 </Menu.Item>
             </Menu>
         </Space>

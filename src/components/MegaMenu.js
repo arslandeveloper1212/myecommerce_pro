@@ -2,7 +2,7 @@ import { Menu, Space, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 function MegaMenu() {
     return (
-        <div style={{ backgroundColor: "white" }}>
+        <div style={{ backgroundColor: "white"}}>
 
             <Menu
                 mode='horizontal'
@@ -14,9 +14,11 @@ function MegaMenu() {
                             {
                                 label: <MegaList />,
                                 key: "MegaList",
+                                className:'heading_megamenu',
                                 style: {
                                     height: "fit-content",
                                     backgroundColor: "white",
+
                                 }
                             }
 
@@ -25,14 +27,16 @@ function MegaMenu() {
                         ]
                     },
                     {
-                        label: <Link style={{ textDecoration: "none" }} to="/shop">Shop</Link>,
+                        label: <Link className='heading_megamenu' style={{ textDecoration: "none" }} to="/shop">Shop</Link>,
                         key: "Shop",
 
                     },
                     {
-                        label: "What's New",
-                        key: "What's New",
+                        label: <Link className='heading_megamenu' style={{ textDecoration: "none" }} to="/contact-form">Contact Us</Link>,
+                        key: "contact",
+
                     },
+                  
 
                 ]}
                 style={{ border: "none", boxShadow: "none" }}
@@ -48,18 +52,18 @@ function MegaMenu() {
 function MegaList() {
     return (
         <div >
-            <Typography.Title style={{ padding:"10px" }} level={3}>Sub Category</Typography.Title>
+            <Typography.Title className='heading_megamenu' style={{ padding:"10px" }} level={3}>Sub Category</Typography.Title>
             <Space direction='horizontal'>
                 <Menu  items={
                     [
                         {
-                            label: <Link style={{ textDecoration: "none" }} to="/furniture">Furniture</Link>,
+                            label: <Link className='heading_megamenu' style={{ textDecoration: "none" }} to="/category/furniture">Furniture</Link>,
                             key: "Furniture",
 
                         },
                         
                         {
-                            label: <Link style={{ textDecoration: "none" }} to="/Laptop">Laptop</Link>,
+                            label: <Link className='heading_megamenu' style={{ textDecoration: "none" }} to="/category/Laptop">Laptop</Link>,
                             key: "Laptop",
                         },
                     ]
@@ -68,11 +72,11 @@ function MegaList() {
                 />
                 <Menu items={[
                     {
-                        label: <Link style={{ textDecoration: "none" }} to="/hand-bag">Hand Bag</Link>,
+                        label: <Link className='heading_megamenu' style={{ textDecoration: "none" }} to="/category/hand-bag">Hand Bag</Link>,
                         key: "Hand Bag",
                     },
                     {
-                        label: <Link style={{ textDecoration: "none" }} to="/headphone">Headphone</Link>,
+                        label: <Link className='heading_megamenu' style={{ textDecoration: "none" }} to="/category/headphone">Headphone</Link>,
                         key: "Headphone",
                     },
                     

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCartTotal, removeItem, increaseItemQuantity, decreaseItemQuantity } from '../Redux/slices/cartslices';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../assets/css/style.css'; // Import the CSS file
+import Login from './Login';
 
 const CartDataPage = () => {
+  const navigate = useNavigate();
+
   const { cart, totalQuantity, totalPrice } = useSelector((state) => state.allcart);
   const dispatch = useDispatch();
   const [itemsToShow, setItemsToShow] = useState(3); // State to track number of items to display
@@ -19,6 +22,16 @@ const CartDataPage = () => {
 
   const loadMoreItems = () => {
     setItemsToShow(itemsToShow + 5); // Increase the number of items to display by 3
+  };
+
+  const onLoginPage = () => {
+    if (localStorage.getItem("user")) {
+      // User is logged in, proceed to checkout
+      navigate("/checkout");
+    } else {
+      // User is not logged in, redirect to login page
+      navigate("/login");
+    }
   };
 
   return (
@@ -44,11 +57,9 @@ const CartDataPage = () => {
                             <div className="col-md-9">
                               <div className="info">
                                 <div className="product-name">
-                               
                                   <Link to={`/cartdatapage/${item.id}`}>{item.title}</Link>
                                   <div className="product-info">
                                     <h5 className=''>Price: <strong className="value fs-4">${item.price}</strong></h5>
-                                    
                                     <div className='m-2'>Quantity: &nbsp;
                                       <button className="btn btn-outline-secondary btn-sm" onClick={() => dispatch(decreaseItemQuantity(item.id))}>-</button>
                                       <span className="mx-2">{item.quantity}</span>
@@ -59,11 +70,8 @@ const CartDataPage = () => {
                                     </div>
                                   </div>
                                 </div>
-                               
                               </div>
-                              
                             </div>
-                            
                           </div>
                         </div>
                       ))}
@@ -76,11 +84,11 @@ const CartDataPage = () => {
                       <br></br>
                       <div className="summary-item"><span className="text">Total Price</span><span className="price">$ <strong>&nbsp; {totalPrice}</strong></span></div>
                       <br></br>
-                      <Link to="/" className="btn btn-primary btn-lg btn-block mt-4 col-12">Checkout</Link>
+                      <button className="btn btn-primary btn-lg btn-block mt-4 col-12" onClick={onLoginPage}>Checkout</button>
                     </div>
                   </div>
                 </div>
-                {cart.length > itemsToShow && ( // Render "Load More" button if there are more items to show
+                {cart.length > itemsToShow && (
                   <div className="row justify-content-center p-4">
                     <div className="col-lg-8 text-center">
                       <button className="btn btn-secondary" onClick={loadMoreItems}>Load More</button>

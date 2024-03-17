@@ -10,6 +10,8 @@ import Topnav from './Topnav';
 import DrawerSideBar from './DrawerSideBar';
 
 
+
+
 const Navbar = () => {
   const item = useSelector(state => state.allcart.cart)
   const Navigate = useNavigate();
@@ -34,13 +36,15 @@ const Navbar = () => {
               </div>
 
               <form>
-                <div className='d-flex d-lg-flex d-md-none d-sm-none  '>
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                <div className='d-flex d-lg-flex d-md-none d-sm-none align-items-center' style={{ position: "relative" }}>
+                  <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{width:"302px"}} />
+                  <i className="fa fa-search" style={{ position: "absolute", right: "0", marginRight: "20px" }}></i>
                 </div>
 
               </form>
+
               <div className='section_nav_wrapper'>
+
                 <PersonOutlineIcon />
                 <span className='mb-0' style={{ cursor: "pointer" }}>Account </span>
                 &nbsp;
@@ -50,6 +54,7 @@ const Navbar = () => {
 
 
               </div>
+              
             </div>
 
           </div>
@@ -58,16 +63,16 @@ const Navbar = () => {
             <DrawerSideBar />
 
           </div>
-          
+
         </div>
 
 
-        <div className='badge-hidden' style={{position:"absolute", top:"0",right:"0", marginTop:"21px", marginRight:"65px", cursor:"pointer"}}>
-        <Badge badgeContent={item.length} color="primary">
+        <div className='badge-hidden' style={{ position: "absolute", top: "0", right: "0", marginTop: "21px", marginRight: "65px", cursor: "pointer" }}>
+          <Badge badgeContent={item.length} color="primary">
             <AddShoppingCartIcon onClick={handleClick} />
           </Badge>
         </div>
-        
+
       </div>
     </div>
 
