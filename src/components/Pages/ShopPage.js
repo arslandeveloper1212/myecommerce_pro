@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addcart } from '../Redux/slices/cartslices';
 import RatingStar from '../RatingStar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ShopPage = () => {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const allProducts = useSelector(state => state.allcart.products);
     const [selectedCategory, setSelectedCategory] = useState(null);
@@ -23,7 +24,13 @@ const ShopPage = () => {
 
     const add = (item) => {
         dispatch(addcart(item));
-        toast.success(`${item.title} added to cart`);
+        toast.success(`${item.title} added to cart`, {
+            onClick: () => {
+              navigate("/cartdatapage"); // Redirect to the shopping cart page
+            },
+            position: "bottom-right",
+           
+          });
     };
 
     const handleCategoryClick = (category) => {

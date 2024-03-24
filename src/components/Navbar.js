@@ -69,7 +69,7 @@ const Navbar = () => {
 
         <div className='badge-hidden' style={{ position: "absolute", top: "0", right: "0", marginTop: "21px", marginRight: "65px", cursor: "pointer" }}>
           <Badge badgeContent={item.length} color="primary">
-            <AddShoppingCartIcon onClick={handleClick} />
+            <AddShoppingCartIcon  onClick={handleClick} />
           </Badge>
         </div>
 

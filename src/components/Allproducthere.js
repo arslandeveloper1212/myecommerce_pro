@@ -21,6 +21,7 @@ const Allproducthere = () => {
             navigate("/cartdatapage"); // Redirect to the shopping cart page
           },
           position: "bottom-right",
+         
         });
       };
 

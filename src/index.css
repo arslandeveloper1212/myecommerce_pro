@@ -8,6 +8,11 @@
   gap: 0px;
 }
 
+.custom-toast{
+  background-color: red;
+}
+
+
 .heading_megamenu{
  font-weight: 700;
 }
@@ -273,6 +278,8 @@ font-size: 20px;
  .banner_inner_media_query .container, .badge-hidden{
   display: none;
  }
+
+
 
 
 

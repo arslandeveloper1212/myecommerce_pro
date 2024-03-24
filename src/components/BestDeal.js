@@ -5,6 +5,7 @@ import AddtoCartbutton from './AddtoCartbutton';
 import { useDispatch, useSelector } from 'react-redux';
 import { addcart } from './Redux/slices/cartslices';
 import { bestDeal } from './Pages/CartData';
+import { Link } from 'react-router-dom';
 
 const BestDeal = () => {
     const getitem = useSelector((state) => state.allcart.products);
@@ -60,20 +61,23 @@ const BestDeal = () => {
             <Slider {...settings} style={{ display: 'flex', flexDirection: 'row' }}>
                 {data.map((item, index) => (
                     <div key={index}>
-                        <div className='d-flex flex-column'>
-                            <div className='bestdeal_hit zoom-img'>
-                                <img src={item.image} alt='homepod mini' className='img-fluid' />
-                            </div>
-                            <div className='bestdeal_content'>
-                                <h4>{item.title}</h4>
-                                <strong>$ {item.price}</strong>
-                                <p className='mb-0 mt-2'>{item.description}</p>
-                                <div className='d-flex align-items-center gap-2'>
-                                    <RatingStar className="rating" />
-                                    <span>{item.rating}</span>
+                        <Link to={`/shop`} style={{ textDecoration: "none", color:"black" }}>
+                            <div className='d-flex flex-column' >
+                                <div className='bestdeal_hit zoom-img'>
+                                    <img src={item.image} alt='homepod mini' className='img-fluid' />
+                                </div>
+                                <div className='bestdeal_content'>
+                                    <h4>{item.title}</h4>
+                                    <strong>$ {item.price}</strong>
+                                    <p className='mb-0 mt-2'>{item.description}</p>
+                                    <div className='d-flex align-items-center gap-2'>
+                                        <RatingStar className="rating" />
+                                        <span>{item.rating}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
+
                     </div>
                 ))}
             </Slider>
