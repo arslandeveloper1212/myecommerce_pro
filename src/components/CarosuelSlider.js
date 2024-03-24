@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import myImage from '../images/backg.jpg'; // Corrected image paths
+import myImage from '../images/hero.jpg'; // Corrected image paths
 import myImage2 from '../images/back.png'; // Corrected image paths
-import myImage3 from '../images/header-mobile.jpg'; // Corrected image paths
+import myImage3 from '../images/hero.jpg'; // Corrected image paths
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -25,8 +25,8 @@ const CarosuelSlider = () => {
             <img
               src={myImage2}
               alt="background-img"
-              className="img-fluid "
-              style={{ height: "100%", width: "100%", objectFit: "cover", backgroundRepeat: "no-repeat" }}
+              className="img-fluid"
+              style={{ height: "60%", width: "100%", objectFit: "cover", backgroundRepeat: "no-repeat" }}
             />
           </div>
           <div>

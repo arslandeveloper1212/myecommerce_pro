@@ -61,39 +61,49 @@ function Login() {
   
 
 
-    // // Basic validation
-    // let hasError = false;
-    // const newErrors = {  password: '', email: '' };
+    // Basic validation
+    let hasError = false;
+    const newErrors = {  password: '', email: '' };
 
   
 
-    // if (formData.password === '') {
-    //   newErrors.password = 'Password is required';
-    //   hasError = true;
-    // }
+    if (formData.password === '') {
+      newErrors.password = 'Password is required';
+      hasError = true;
+    }
 
-    // if (formData.email === '') {
-    //     newErrors.email = '@example.com';
-    //     hasError = true;
-    //   }
+    if (formData.email === '') {
+        newErrors.email = '@example.com';
+        hasError = true;
+      }
 
-    // if (hasError) {
-    //   setErrors(newErrors);
-    // } else {
-    //   // Here, you can perform your login logic
-    //   console.log('Login data:', formData);
-    // }
+    if (hasError) {
+      setErrors(newErrors);
+    } else {
+      // Here, you can perform your login logic
+      console.log('Login data:', formData);
+    }
   };
 
   return (
-    <div style={{backgroundColor: "#f0f0f0", display: "flex", justifyContent: "center", alignItems: "center",
- flexDirection: "column", minHeight: "100vh"}}>
-     <div style={{backgroundColor: "lightgrey", padding: "60px", borderRadius: "20px"}}>
+   
+    <div style={{
+      background: `url(https://itseeze.com/_webedit/cached-images/2761-0-0-1250-10000-7500-1344.png)`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+      minHeight: "100vh",
+    
+    }}>
+     <div style={{backgroundColor: "#03172aba", padding: "60px", borderRadius: "20px", color:"white"}}>
      <h2 style={{textAlign:"center", fontSize: "38px"}}>Login</h2>
       <form onSubmit={handleSubmit}>
        
 
-        <div>
+        <div className='form-group mb-3'>
           <label>Email:</label>
           <input
             type="text"
@@ -106,7 +116,7 @@ function Login() {
           <span className="error"style={{color: "red"}}>{errors.email}</span>
         </div>
 
-        <div>
+        <div className='form-group mb-3'>
           <label>Password:</label>
           <input
             type="password"
@@ -117,11 +127,12 @@ function Login() {
           />
           <span className="error" style={{color: "red"}}>{errors.password}</span>
         </div>
-        <button type="submit" className='btn btn-danger col-12 mt-3'>Submit</button>
-        <span>if you already have not account please signin <Link to="/signup">SignUp</Link></span>
+        <button type="submit" className='btn btn-primary col-12 mt-3'>Submit</button>
+        <span >if you are not registered please signup <Link to="/signup">SignUp</Link></span>
       </form>
     </div>
     </div>
+    
   );
 }
 

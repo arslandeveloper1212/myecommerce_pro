@@ -5,16 +5,24 @@ import RatingStar from './RatingStar';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { useNavigate } from 'react-router-dom';
 const Allproducthere = () => {
     const dispatch = useDispatch();
     const data = useSelector(state => state.allcart.products);
     const [selectedCategory, setSelectedCategory] = useState(null); // State to track selected category
 
+
+    const navigate = useNavigate();
+
     const add = (item) => {
         dispatch(addcart(item));
-        toast.success(`${item.title} added to cart`);
-    };
+        toast.success(`${item.title} added to cart`, {
+          onClick: () => {
+            navigate("/cartdatapage"); // Redirect to the shopping cart page
+          },
+          position: "bottom-right",
+        });
+      };
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
@@ -22,7 +30,7 @@ const Allproducthere = () => {
 
     return (
         <div className='container mb-3'>
-            <ToastContainer /> 
+            <ToastContainer  /> 
             <div className='row d-flex justify-content-between'>
                 <div className='col-lg-2'>
                     <div className='p-addtocart d-flex flex-column' style={{ gap: "20px" }}>
